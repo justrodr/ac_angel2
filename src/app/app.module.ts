@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -19,21 +20,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavMenuComponent,
     CounterComponent,
     FetchDataComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-        { path: '', redirectTo: 'home', pathMatch: 'full' },
+        { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
         { path: 'home', component: HomeComponent },
         { path: 'counter', component: CounterComponent },
         { path: 'fetch-data', component: FetchDataComponent },
-        { path: '**', redirectTo: 'home' }
+        { path: 'dashboard', component: DashboardComponent},
+        { path: '**', redirectTo: 'dashboard' }
     ]),
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  exports: [DashboardComponent] // maybe not here
 })
 export class AppModule { }
