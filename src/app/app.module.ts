@@ -1,3 +1,4 @@
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AutopayComponent } from './components/autopay/autopay.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { AutopayComponent } from './components/autopay/autopay.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
         { path: 'home', component: HomeComponent },
@@ -37,3 +41,4 @@ import { AutopayComponent } from './components/autopay/autopay.component';
   exports: [DashboardComponent] // maybe not here
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule)
