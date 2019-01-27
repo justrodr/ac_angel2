@@ -13,15 +13,15 @@ export class DashboardComponent implements OnInit{
         
         this.homes.push({
             ownerId: 1,
-            path: './pictures/house1.jpg'
+            path: './assets/house.jpg'
           });
         this.homes.push({
             ownerId: 2,
-            path: './pictures/house1.jpg'
+            path: './assets/house2.jpg'
              });
         this.homes.push({
             ownerId: 3,
-            path: './pictures/house1.jpg'
+            path: './assets/house3.jpg'
         });
         console.log(this.homes[0].path);
         
