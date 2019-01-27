@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit{
 
         this.filters.push({
             name: "Living Room",
+            filterId: 1,
             ownerId: 0,
             purchasedFrom: "Amazon",
             expirationDate: new Date(),
@@ -25,6 +26,7 @@ export class DashboardComponent implements OnInit{
         this.filters.push({
             name: "Bedroom",
             ownerId: 0,
+            filterId: 2,
             purchasedFrom: "Amazon",
             expirationDate: new Date(),
             nextPurchaseDate: new Date()
@@ -32,6 +34,7 @@ export class DashboardComponent implements OnInit{
         this.filters.push({
             name: "Kitchen",
             ownerId: 0,
+            filterId: 3,
             purchasedFrom: "Amazon",
             expirationDate: new Date(),
             nextPurchaseDate: new Date()

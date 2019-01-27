@@ -20,7 +20,7 @@ export class AutopayComponent implements OnInit{
 
     constructor() {
         this.filters.push({
-            name: 'your momma',
+            name: 'filter0',
             filterId: this.idCount,
             ownerId: 1,
             purchasedFrom: 'home depot',
@@ -29,7 +29,7 @@ export class AutopayComponent implements OnInit{
         });
         this.idCount++;
         this.filters.push({
-            name: 'your dadda',
+            name: 'filter1',
             ownerId: 1,
             filterId: this.idCount,
             purchasedFrom: 'amazon',
@@ -38,7 +38,7 @@ export class AutopayComponent implements OnInit{
         });
         this.idCount++;
         this.filters.push({
-            name: 'your granny',
+            name: 'fitler2',
             filterId: this.idCount,
             ownerId: 1,
             purchasedFrom: 'lowes',
@@ -47,7 +47,7 @@ export class AutopayComponent implements OnInit{
         });
         this.idCount++;
         this.filters.push({
-            name: 'your momma',
+            name: 'filter3',
             ownerId: 1,
             filterId: this.idCount,
             purchasedFrom: 'home depot',
@@ -56,7 +56,7 @@ export class AutopayComponent implements OnInit{
         });
         this.idCount++;
         this.filters.push({
-            name: 'your dadda',
+            name: 'filter4',
             ownerId: 1,
             filterId: this.idCount,
             purchasedFrom: 'amazon',
@@ -80,11 +80,14 @@ export class AutopayComponent implements OnInit{
         };
         this.idCount++;
         this.filters.push(newFilter);
-        console.log("success");
+        this.name = '';
+        this.pur = '';
+        this.exp = null;
+        this.buy = null;
+
     }
 
     removeFilter(fitlerId: number){
-        console.log(fitlerId);
         this.filters.forEach( (item, index) => {
             if(item.filterId === fitlerId) this.filters.splice(index,1);
           });

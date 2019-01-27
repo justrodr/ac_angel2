@@ -1,4 +1,3 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -29,7 +28,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     RouterModule.forRoot([
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-        { path: 'home', component: HomeComponent },
         { path: 'dashboard', component: DashboardComponent},
         { path: 'autopay', component: AutopayComponent},
         { path: '**', redirectTo: 'dashboard' }
@@ -41,4 +39,3 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [DashboardComponent] // maybe not here
 })
 export class AppModule { }
-platformBrowserDynamic().bootstrapModule(AppModule)
