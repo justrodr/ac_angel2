@@ -8,6 +8,7 @@ import { Home } from 'src/app/shared/home';
 })
 export class DashboardComponent implements OnInit{
     public homes: Home[] = [];
+    public house: Home = null; 
 
     constructor() {
         
@@ -22,16 +23,15 @@ export class DashboardComponent implements OnInit{
         this.homes.push({
             ownerId: 3,
             path: './assets/house3.jpg'
-        });
-        console.log(this.homes[0].path);
-        
+        });   
     }
 
     ngOnInit() {
 
     }
 
-    test(): void{
-        console.log("hello");
+    chooseHome(home : Home): void{
+        console.log(home.path);
+        this.house = home;
     }
 }
